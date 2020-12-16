@@ -1,0 +1,22 @@
+<?xml version ="1.0" encoding="UTF-8"?>
+<launch>
+    <arg name="debug" default="false" />
+    <arg name="gui" default="true" />
+    <arg name="headless" default="false" />
+    <arg name="paused" default="false" />
+    <arg name="urdf_file" default="serial3_pos.urdf" />
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="debug" value="$(arg debug)" />
+        <arg name="paused" value="$(arg paused)" />
+        <arg name="gui" value="$(arg gui)" />
+        <arg name="headless" value="$(arg headless)" />
+        <arg name="use_sim_time" value="true" />
+    </include>
+    <include file="$(find serial3_robot)/launch/serial3_spawner.launch">
+        <arg name="x" value="0.0" />
+        <arg name="y" value="0.0" />
+        <arg name="z" value="0.0" />
+        <arg name="urdf_robot_file" value="$(find serial3_robot)/urdf/$(arg urdf_file)" />
+        <arg name="robot_name" value="serial3" />
+    </include>
+</launch>

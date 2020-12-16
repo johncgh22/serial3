@@ -1,0 +1,27 @@
+# Configuracion de controladores de posicion
+serial3:
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50 # 50 Hz
+
+  joint_e1_position_controller:
+    type: position_controllers/JointPositionController
+    joint: base_to_e1_joint
+    # pid: {p: 100.0, i: 0.01, d: 10.0 }
+
+  joint_e2_position_controller:
+    type: position_controllers/JointPositionController
+    joint: e1_to_e2_joint
+    # pid: {p: 100.0, i: 0.01, d: 10.0 }
+
+  joint_e3_position_controller:
+    type: position_controllers/JointPositionController
+    joint: e2_to_e3_joint
+    # pid: {p: 100.0, i: 0.01, d: 10.0 }
+
+
+  /gazebo_ros_control/pid_gains:
+    base_to_e1_joint: {p: 100.0, i: 0.01, d: 10.0 }
+    e1_to_e2_joint: {p: 100.0, i: 0.01, d: 10.0 }
+    e2_to_e3_joint: {p: 100.0, i: 0.01, d: 10.0 }
+      

@@ -1,0 +1,10 @@
+<?xml version ="1.0" encoding="UTF-8"?>
+<launch>
+    <param name="robot_description" textfile="$(find serial3_robot)/urdf/serial3_pos.urdf" />
+    <rosparam file="$(find serial3_robot)/config/position_controllers.yaml" command="load" />
+    <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" 
+        ns="/serial3" args="joint_e1_position_controller 
+                            joint_e2_position_controller
+                            joint_e3_position_controller
+                            joint_state_controller" />
+</launch>

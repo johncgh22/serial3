@@ -1,0 +1,18 @@
+# Configuracion de controladores de posicion
+serial3:
+  # Joint State controller 
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50   # 50 Hz
+
+  # Trajectory Controller
+  arm_controller:
+    type: position_controllers/JointTrajectoryController
+    joints:
+      - base_to_e1_joint
+      - e1_to_e2_joint
+      - e2_to_e3_joint
+    gain:
+      base_to_e1_joint: {p: 100.00, i: 0.01, d: 10.0 }
+      e1_to_e2_joint: {p: 100.00, i: 0.01, d: 10.0 }
+      e2_to_e3_joint: {p: 100.00, i: 0.01, d: 10.0 }
