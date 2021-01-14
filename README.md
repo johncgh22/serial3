@@ -3,3 +3,6 @@
 
 Repositorio de control y manejo de un Manipulador Serial de 3 GDL
 Incluye sus definiciones del modelo en archivos URDF
+
+## Controladores
+Se puede controlar mediante el uso de **JointTrajectoryController y **JointPositionController
