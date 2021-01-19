@@ -8,4 +8,4 @@ Incluye sus definiciones del modelo en archivos URDF
 Se puede controlar mediante el uso de **JointTrajectoryController y **JointPositionController
 
 ## Archivos de Configuracion
-Se puede inicializar el paquete mediante RViZ o Gazebo
+Se puede inicializar el paquete mediante RViZ o Gazebo. Los paquetes de configuracion permiten seleccionar el archivo URDF que desee.
