@@ -19,7 +19,6 @@ serial3:
     joint: e2_to_e3_joint
     # pid: {p: 100.0, i: 0.01, d: 10.0 }
 
-
   /gazebo_ros_control/pid_gains:
     base_to_e1_joint: {p: 100.0, i: 0.01, d: 10.0 }
     e1_to_e2_joint: {p: 100.0, i: 0.01, d: 10.0 }
